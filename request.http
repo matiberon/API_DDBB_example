@@ -1,0 +1,44 @@
+### REQUESTS PARA LOS USUARIOS.
+### Obtencion de todos los usuarios.
+GET http://localhost:1234/usuarios
+
+### Obtencion de los datos de un usuario en particular consignado por su número de id.
+GET http://localhost:1234/usuarios/2
+
+### Obtener el nombre de un producto que se indica por id.
+GET http://localhost:1234/productos/nombre/2
+
+### Obtener el teléfono de un usuario que se indica por id.
+GET http://localhost:1234/usuarios/telefono/2
+
+### Obtener el nombre de un usuario que se indica por id.
+GET http://localhost:1234/usuarios/nombre/1
+
+
+### Guardar un usuario nuevo.
+POST http://localhost:1234/usuarios
+
+{
+    "id": 23,
+    "nombre": "Tito Juarez",
+    "edad": 32,
+    "email": "tito@example.com",
+    "telefono": "+9 888-777-5456"
+}
+
+###  Modificar algun atributo de usuario.
+PATCH http://localhost:1234/usuarios/3
+
+{
+    "nombre": "Michael Salamanca"
+}
+
+### Borrar un usuario de los datos.
+DELETE http://localhost:1234/usuarios/10
+
+### REQUESTS PARA LOS PRODUCTOS
+### Obtener el precio de un produto por id.
+GET http://localhost:1234/productos/precio/5
+
+### Obtener el total del stock actual de productos, la sumatoria de los precios individuales.
+GET http://localhost:1234/productos/total
