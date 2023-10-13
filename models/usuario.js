@@ -7,6 +7,9 @@ const Usuario = db.define('Usuario', {
 	edad: {type: DataTypes.STRING},
 	email: { type: DataTypes.STRING},
 	telefono: { type: DataTypes.STRING},
+	usuario: { type: DataTypes.STRING},
+	password: { type: DataTypes.STRING},
+	nivel: { type: DataTypes.INTEGER},
 },
 {
 	timestamps:false,

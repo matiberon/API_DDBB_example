@@ -13,24 +13,29 @@ GET http://localhost:1234/usuarios/nombre/1
 
 ### Guardar un usuario nuevo.
 POST http://localhost:1234/usuarios
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzdWFyaW8iOiJqdWFuLnBlcmV6Iiwibml2ZWwiOjEsImV4cCI6MTY5NzIzNDA4MTE1NCwiaWF0IjoxNjk3MjM0MDIxfQ.bI-DHnn1Kw2PRbi7CBYuM4_orvynC1cr-JBoSvvl5A4
 
 {
-    "id": 23,
-    "nombre": "Tito Juarez",
-    "edad": 32,
-    "email": "tito@example.com",
-    "telefono": "+9 888-777-5456"
+    "id": 13,
+    "nombre": "Peter Paez",
+    "edad": 22,
+    "email": "peter@example.com",
+    "telefono": "+9 111-333-13212",
 }
 
 ###  Modificar algun atributo de usuario.
 PATCH http://localhost:1234/usuarios/3
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzdWFyaW8iOiJqdWFuLnBlcmV6Iiwibml2ZWwiOjEsImV4cCI6MTY5NzIzNDA4MTE1NCwiaWF0IjoxNjk3MjM0MDIxfQ.bI-DHnn1Kw2PRbi7CBYuM4_orvynC1cr-JBoSvvl5A4
 
 {
     "nombre": "Michael Salamanca"
 }
 
 ### Borrar un usuario de los datos.
-DELETE http://localhost:1234/usuarios/10
+DELETE http://localhost:1234/usuarios/11
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzdWFyaW8iOiJqdWFuLnBlcmV6Iiwibml2ZWwiOjEsImV4cCI6MTY5NzIzNDA4MTE1NCwiaWF0IjoxNjk3MjM0MDIxfQ.bI-DHnn1Kw2PRbi7CBYuM4_orvynC1cr-JBoSvvl5A4
 
 ### REQUESTS PARA LOS PRODUCTOS
 ### Obtener el precio de un produto por id.
@@ -41,3 +46,15 @@ GET http://localhost:1234/productos/nombre/2
 
 ### Obtener el total del stock actual de productos, la sumatoria de los precios individuales.
 GET http://localhost:1234/productos
+
+### OTROS REQUESTS
+### Simular formulario de loggeo.
+
+POST http://localhost:1234/auth
+Content-Type: application/json
+
+    {
+        "usuario": "juan.perez",
+        "password": "juan123"
+    }
+
